@@ -6,7 +6,18 @@ import java.awt.Point;
  * Created by Linea on 18/12/2016.
  */
 public class Stick {
-	private int length_stick;
-	private int width_stick;
-	private 
+	private int lengthStick;
+	private int widthStick;
+	private Point pointStick;
+	
+	public Stick(int lengthStick, int widthStick, Point pointStick){
+		this.lengthStick = lengthStick;
+		this.widthStick = widthStick;
+		this.pointStick = pointStick;
+	}
+	
+	public static void main(String[] args){
+		System.out.println("hej");
+	}
+	
 }
