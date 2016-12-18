@@ -21,11 +21,11 @@ public class Ball {
     }
 
    //Getter og setter metoder
-    public int getDiameterBall(){
-        return diameterBall;
-    }
+   public int getDiameterBall() {
+       return diameterBall;
+   }
 
-    public void setDiameterBall(int diameterBall){
+    public void setDiameterBall(int diameterBall) {
         this.diameterBall = diameterBall;
     }
 
@@ -52,4 +52,5 @@ public class Ball {
     public void setColorBall(String colorBall) {
         this.colorBall = colorBall;
     }
+
 }
