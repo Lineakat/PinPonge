@@ -1,5 +1,7 @@
 package Model;
 
+import java.awt.Point;
+
 /**
  * Created by Linea on 18/12/2016.
  */
