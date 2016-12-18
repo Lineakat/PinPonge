@@ -1,4 +1,4 @@
-package Hej;
+package Controller;
 
 /**
  * Created by Linea on 18/12/2016.
