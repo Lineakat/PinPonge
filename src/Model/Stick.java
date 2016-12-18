@@ -15,9 +15,9 @@ public class Stick {
 		this.widthStick = widthStick;
 		this.pointStick = pointStick;
 	}
+	
+	
+	
 
-	public static void main(String[] args){
-		System.out.println("hej");
-	}
-
+	
 }
