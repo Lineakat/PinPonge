@@ -4,9 +4,13 @@ package Controller;
  * Created by Linea on 18/12/2016.
  */
 public class Controller {
+    //private Model model;
+    //private View view;
+
 
     //Constructor
-    public Controller(){
+    public Controller() {
+
     }
 
     public static void main(String[] args){
