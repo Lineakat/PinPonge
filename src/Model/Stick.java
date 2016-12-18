@@ -3,7 +3,7 @@ package Model;
 import java.awt.Point;
 
 /**
- * Created by Linea on 18/12/2016.
+ * Created by Philip on 18/12/2016.
  */
 public class Stick {
 	private int lengthStick;
@@ -16,7 +16,29 @@ public class Stick {
 		this.pointStick = pointStick;
 	}
 	
+	public void setLengthStick(int lengthStick){
+		this.lengthStick = lengthStick;
+	}
 	
+	public int getLengthStick(){
+		return this.lengthStick;
+	}
+	
+	public void setWidthStick(int widthStick){
+		this.widthStick = widthStick;
+	}
+	
+	public int getWidthStick(){
+		return this.widthStick;
+	}
+	
+	public void setPointStick(Point pointStick){
+		this.pointStick = pointStick;
+	}
+	
+	public Point getPointStick(){
+		return this.pointStick;
+	}
 	
 
 	
