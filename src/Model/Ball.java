@@ -6,7 +6,7 @@ package Model;
 public class Ball {
     //Rellowwww philip <3
 	//i vuw u!!! <3
-	int i = 1;
+	int i = 2;
 	int j =2;
 	//skd
 }
