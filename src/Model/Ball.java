@@ -9,6 +9,6 @@ public class Ball {
 
 	int i = 8;
 
-	int j =2;
+	int j = 2;
 	//skd
 }
