@@ -9,15 +9,15 @@ public class Stick {
 	private int lengthStick;
 	private int widthStick;
 	private Point pointStick;
-	
+
 	public Stick(int lengthStick, int widthStick, Point pointStick){
 		this.lengthStick = lengthStick;
 		this.widthStick = widthStick;
 		this.pointStick = pointStick;
 	}
-	
+
 	public static void main(String[] args){
 		System.out.println("hej");
 	}
-	
+
 }
