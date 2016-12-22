@@ -2,6 +2,7 @@ package View;
 
 import javax.swing.*;
 import java.awt.*;
+import java.awt.image.BufferedImage;
 
 /**
  * Created by Linea on 18/12/2016.
@@ -10,10 +11,12 @@ public class GameBoard extends JPanel {
 
     private JPanel panelCenter;
     private JTextField text;
+    
 
     //Controller
     public GameBoard(){
         text = new JTextField("New Game! ");
+      
         panelCenter = new JPanel();
         setVisible(true);
         setPreferredSize(new Dimension(1200, 900));
@@ -26,13 +29,19 @@ public class GameBoard extends JPanel {
     public void startup(){
 
         add(panelCenter);
+
+        
         panelCenter.add(text);
 
     }
 
-    public void startBall(Graphics g){
+    public void paintBall(Graphics g){
         g.fillOval(300, 400, 10,10);
 
+    }
+    
+    public void Paint(Graphics g){
+    	paintBall(g);
     }
 
 
