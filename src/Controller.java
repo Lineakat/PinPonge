@@ -22,10 +22,11 @@ public class Controller {
     }
 
     private void createALButtonsStart() {
-        view.getStart().addALToStartGameButton(e -> buttonStartGame());
+        view.getStart().addALToStartGameButton(e -> System.out.println("jep"));
     }
 
     public void buttonStartGame(){
+    	
         view.goToPage(View.whichPage.GAMEBOARD);
         view.getStart().colorButton();
     }

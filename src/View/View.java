@@ -31,8 +31,8 @@ public class View {
         createGameBoard();
         createGameOver();
 
-        //goToPage(whichPage.START);
-        goToPage(whichPage.GAMEOVER);
+        goToPage(whichPage.START);
+        //goToPage(whichPage.GAMEOVER);
 
         frame.setVisible(true);
         frame.setSize(1200,900);
