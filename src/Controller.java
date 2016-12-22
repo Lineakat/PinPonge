@@ -1,4 +1,4 @@
-import View.View;
+import View.*;
 
 /**
  * Created by Linea og philip on 18/12/2016.
