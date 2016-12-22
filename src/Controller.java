@@ -23,7 +23,7 @@ public class Controller {
     }
 
     private void createALButtonsStart() {
-        view.getStart().addALToStartGameButton(e -> System.out.println("jep"));
+        view.getStart().addALToStartGameButton(e -> buttonStartGame());
     }
 
     public void buttonStartGame(){
