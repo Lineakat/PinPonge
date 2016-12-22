@@ -16,6 +16,7 @@ public class Start extends JPanel{
     public Start(){
         startGameButton = new JButton("Start Game");
         panelCenter = new JPanel();
+
         setVisible(true);
         setPreferredSize(new Dimension(1200, 900));
 
@@ -27,8 +28,16 @@ public class Start extends JPanel{
     }
 
     public void startup(){
-        add(panelCenter);
-        panelCenter.add(startGameButton);
+        setLayout(new BorderLayout());
+        panelCenter.setLayout(new GridBagLayout());
+
+        GridBagConstraints c = new GridBagConstraints();
+        c.insets = new Insets(10, 10, 10, 10); //plads mellem knapperne og labels
+        c.gridx = 1;
+        c.gridy = 1;
+        panelCenter.add(startGameButton, c);
+
+        add(panelCenter, BorderLayout.CENTER);
     }
 
     public void colorButton(){

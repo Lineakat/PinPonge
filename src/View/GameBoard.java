@@ -11,12 +11,12 @@ public class GameBoard extends JPanel {
 
     private JPanel panelCenter;
     private JTextField text;
-    
+
 
     //Controller
     public GameBoard(){
         text = new JTextField("New Game! ");
-      
+
         panelCenter = new JPanel();
         setVisible(true);
         setPreferredSize(new Dimension(1200, 900));
@@ -30,7 +30,7 @@ public class GameBoard extends JPanel {
 
         add(panelCenter);
 
-        
+
         panelCenter.add(text);
 
     }
@@ -39,7 +39,7 @@ public class GameBoard extends JPanel {
         g.fillOval(300, 400, 10,10);
 
     }
-    
+
     public void Paint(Graphics g){
     	paintBall(g);
     }
