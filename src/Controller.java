@@ -6,10 +6,11 @@ import View.View;
 public class Controller {
     //private Model model;
     private static View view;
+	private static Controller control;
 
     //Constructor
     public Controller() {
-        //view = new View();
+        view = new View();
         createALButtonsStart();
     }
 
@@ -18,7 +19,7 @@ public class Controller {
         //System.out.println("HEJ PHILIP jeg elsker dig!");
 
 
-        view = new View();
+        control = new Controller();
     }
 
     private void createALButtonsStart() {
