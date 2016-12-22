@@ -13,14 +13,14 @@ public class GameBoard extends JPanel {
 
     //Controller
     public GameBoard(){
-        text = new JTextField("Test");
+        text = new JTextField("New Game! ");
         panelCenter = new JPanel();
         setVisible(true);
         setPreferredSize(new Dimension(1200, 900));
-
+        setBackground(Color.black); //Laver baggrunden sort
 
         startup();
-
+        //startBall();
     }
 
     public void startup(){
@@ -29,5 +29,11 @@ public class GameBoard extends JPanel {
         panelCenter.add(text);
 
     }
+
+    public void startBall(Graphics g){
+        g.fillOval(300, 400, 10,10);
+
+    }
+
 
 }
