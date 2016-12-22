@@ -21,6 +21,10 @@ public class View {
 
     //Constructor
     public View(){
+        start = new Start();
+        gameOver = new GameOver();
+        gameBoard = new GameBoard();
+
         start();
 
         createStart();
@@ -45,10 +49,11 @@ public class View {
 
     }
 
-
+/*
     public static void main(String[] args){
         View a = new View();
     }
+*/
 
     public void goToPage(whichPage gotoPage) {
         CardLayout cardLayout = (CardLayout)panel.getLayout();
@@ -69,5 +74,17 @@ public class View {
     private void createGameBoard(){
         gameBoard = new GameBoard();
         panel.add(gameBoard, whichPage.GAMEBOARD.toString());
+    }
+
+    public Start getStart(){
+        return start;
+    }
+
+    public GameBoard getGameBoard(){
+        return gameBoard;
+    }
+
+    public GameOver getGameOver(){
+        return gameOver;
     }
 }

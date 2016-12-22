@@ -29,7 +29,10 @@ public class Start extends JPanel{
     public void startup(){
         add(panelCenter);
         panelCenter.add(startGameButton);
+    }
 
+    public void colorButton(){
+        startGameButton.setBackground(Color.BLUE);
     }
 
 }
