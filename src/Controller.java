@@ -1,7 +1,7 @@
 import View.View;
 
 /**
- * Created by Linea on 18/12/2016.
+ * Created by Linea og philip on 18/12/2016.
  */
 public class Controller {
     //private Model model;
