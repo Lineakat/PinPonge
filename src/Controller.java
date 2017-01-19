@@ -13,6 +13,8 @@ public class Controller {
         view = new View();
         createALButtonsStart();
         createALButtonGameOver();
+        createALButtonToFront();
+        createALButtonRestartGame();
     }
 
     public static void main(String[] args){
@@ -23,6 +25,7 @@ public class Controller {
         control = new Controller();
     }
 
+    //Start
     private void createALButtonsStart() {
         view.getStart().addALToStartGameButton(e -> buttonStartGame());
     }
@@ -30,6 +33,18 @@ public class Controller {
     private void createALButtonGameOver(){
         view.getStart().addALToGameOverButton(e -> buttonGameOver());
     }
+
+
+    //Game over
+    private void createALButtonToFront(){
+        view.getGameOver().addALToToFrontButton(e -> buttonToFront());
+    }
+
+    private void createALButtonRestartGame(){
+        view.getGameOver().addALToRestartGameButton(e -> buttonRestartGame());
+    }
+
+    //Start
 
     public void buttonStartGame(){
         view.goToPage(View.whichPage.GAMEBOARD);
@@ -39,4 +54,15 @@ public class Controller {
     public void buttonGameOver(){
         view.goToPage(View.whichPage.GAMEOVER);
     }
+
+
+    //Game over
+    public void buttonToFront(){
+        view.goToPage(View.whichPage.START);
+    }
+
+    public void buttonRestartGame(){
+        buttonStartGame();
+    }
+
 }

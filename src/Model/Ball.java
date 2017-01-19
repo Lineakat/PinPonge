@@ -11,10 +11,8 @@ public class Ball extends Moveable {
     private String colorBall;
 
     //Constructor
-    public Ball(int diameterBall, int speedBall, Point pointBall, String colorBall){
+    public Ball(int diameterBall, Point pointBall, String colorBall){
         this.diameterBall = diameterBall;
-        this.speedBall = speedBall;
-        this.pointBall = pointBall;
         this.colorBall = colorBall;
     }
 
@@ -27,21 +25,7 @@ public class Ball extends Moveable {
         this.diameterBall = diameterBall;
     }
 
-    public int getSpeedBall() {
-        return speedBall;
-    }
-
-    public void setSpeedBall(int speedBall) {
-        this.speedBall = speedBall;
-    }
-
-    public Point getPointBall() {
-        return pointBall;
-    }
-
-    public void setPointBall(Point pointBall) {
-        this.pointBall = pointBall;
-    }
+    
 
     public String getColorBall() {
         return colorBall;
