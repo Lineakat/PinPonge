@@ -11,50 +11,50 @@ import javax.swing.*;
  * Created by Linea on 18/12/2016.
  */
 public class GameOver extends JPanel {
-	private JPanel panelCenterLost;
+	private JPanel panelCenterGameOver;
 	private JLabel labelLost;
 	private JButton restartButton;
-	
+	private JButton toFrontButton;
 
     //Controller
     public GameOver() {
-    	
-    	panelCenterLost = new JPanel();
-    	labelLost = new JLabel("Game Over"); 
-    	restartButton = new JButton("Restart Game");
-    	
-    	
-    	
-    	
-    	startup();
-    	centerpanel();
+		panelCenterGameOver = new JPanel();
+		labelLost = new JLabel("Game Over");
+		restartButton = new JButton("Restart Game");
+		toFrontButton = new JButton("To Front");
 
+		startup();
+	}
 
-    }
-    
-    public void centerpanel(){
-    	JPanel pane = new JPanel(new GridBagLayout());
-    	GridBagConstraints c = new GridBagConstraints();
-    	panelCenterLost.setLayout(new BorderLayout());
-    	
-    	c.gridx = 10;
-    	c.gridy = 10;
-    	pane.add(restartButton, c);
-    	
-    	c.gridx = 2;
-    	c.gridy = 3;
-    	pane.add(labelLost, c);
-    	panelCenterLost.add(pane, BorderLayout.CENTER);
-    }
-    
-    public void addALToStartGameButton(ActionListener a){
-        restartButton.addActionListener(a);
-    }
+	public void addALToRestartGameButton(ActionListener a){
+		restartButton.addActionListener(a);
+	}
+
+	public void addALToToFrontButton(ActionListener a ){
+		toFrontButton.addActionListener(a);
+	}
 
     public void startup(){
-        add(panelCenterLost);
-        panelCenterLost.add(labelLost);
-        panelCenterLost.add(restartButton);
+        add(panelCenterGameOver);
+        //panelCenterLost.add(labelLost);
+        //panelCenterLost.add(restartButton);
+		//panelCenterLost.add(toFrontButton);
 
+		JPanel pane = new JPanel(new GridBagLayout());
+		GridBagConstraints c = new GridBagConstraints();
+		panelCenterGameOver.setLayout(new BorderLayout());
+
+		c.gridx = 1;
+		c.gridy = 1;
+		pane.add(labelLost, c);
+		panelCenterGameOver.add(pane, BorderLayout.CENTER);
+
+		c.gridx = 1;
+		c.gridy = 2;
+		pane.add(restartButton, c);
+
+		c.gridx = 2;
+		c.gridy = 2;
+		pane.add(toFrontButton, c);
     }
 }
