@@ -15,13 +15,12 @@ public class Controller {
         createALButtonGameOver();
         createALButtonToFront();
         createALButtonRestartGame();
+        createALButtonGiveUp();
     }
 
     public static void main(String[] args){
         //System.out.println("HEJ PHILIP du er dejlig!");
         //System.out.println("HEJ PHILIP jeg elsker dig!");
-
-
         control = new Controller();
     }
 
@@ -44,11 +43,15 @@ public class Controller {
         view.getGameOver().addALToRestartGameButton(e -> buttonRestartGame());
     }
 
+    //Gameboard
+    private void createALButtonGiveUp(){
+        view.getGameBoard().addALToGiveUpButton(e -> buttonGiveUp());
+    }
+
     //Start
 
     public void buttonStartGame(){
         view.goToPage(View.whichPage.GAMEBOARD);
-        view.getStart().colorButton();
     }
 
     public void buttonGameOver(){
@@ -63,6 +66,11 @@ public class Controller {
 
     public void buttonRestartGame(){
         buttonStartGame();
+    }
+
+    //Gameboard
+    public void buttonGiveUp(){
+        buttonGameOver();
     }
 
 }

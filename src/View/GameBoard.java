@@ -36,7 +36,7 @@ public class GameBoard extends JPanel {
     }
 
     public void addALToGiveUpButton(ActionListener a){
-
+        giveUpButton.addActionListener(a);
     }
 
     public void paintBall(Graphics g){

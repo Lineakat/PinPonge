@@ -50,8 +50,5 @@ public class Start extends JPanel{
         add(panelCenter, BorderLayout.CENTER);
     }
 
-    public void colorButton(){
-        startGameButton.setBackground(Color.BLUE);
-    }
 
 }
