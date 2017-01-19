@@ -27,6 +27,7 @@ public class GameBoard extends JPanel {
     }
 
     public void startup(){
+<<<<<<< HEAD
         //add(panelCenter);
         
         //drawBall ball = new drawBall();
@@ -36,11 +37,17 @@ public class GameBoard extends JPanel {
        // add(ball);
 
 
+=======
+        add(panelCenter);
+>>>>>>> branch 'master' of https://github.com/Lineakat/PinPonge.git
         panelCenter.add(text);
     }
 
     public void paintBall(Graphics g){
+<<<<<<< HEAD
         g.fillOval(0, 0, 10,10);
+=======
+>>>>>>> branch 'master' of https://github.com/Lineakat/PinPonge.git
         g.setColor(Color.BLUE);
         g.fillOval(30, 40, 100,100);
 
