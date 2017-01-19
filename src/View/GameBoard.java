@@ -27,16 +27,13 @@ public class GameBoard extends JPanel {
     }
 
     public void startup(){
-
         add(panelCenter);
-
-
         panelCenter.add(text);
-
     }
 
     public void paintBall(Graphics g){
-        g.fillOval(300, 400, 10,10);
+        g.setColor(Color.BLUE);
+        g.fillOval(30, 40, 100,100);
 
     }
 

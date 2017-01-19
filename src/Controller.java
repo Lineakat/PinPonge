@@ -12,6 +12,7 @@ public class Controller {
     public Controller() {
         view = new View();
         createALButtonsStart();
+        createALButtonGameOver();
     }
 
     public static void main(String[] args){
@@ -26,9 +27,16 @@ public class Controller {
         view.getStart().addALToStartGameButton(e -> buttonStartGame());
     }
 
+    private void createALButtonGameOver(){
+        view.getStart().addALToGameOverButton(e -> buttonGameOver());
+    }
+
     public void buttonStartGame(){
-    	
         view.goToPage(View.whichPage.GAMEBOARD);
         view.getStart().colorButton();
+    }
+
+    public void buttonGameOver(){
+        view.goToPage(View.whichPage.GAMEOVER);
     }
 }
