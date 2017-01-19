@@ -27,20 +27,31 @@ public class GameBoard extends JPanel {
     }
 
     public void startup(){
+        //add(panelCenter);
+        
+        //drawBall ball = new drawBall();
+       
 
-        add(panelCenter);
+        //panelCenter.add(text);
+       // add(ball);
 
 
         panelCenter.add(text);
-
     }
 
     public void paintBall(Graphics g){
-        g.fillOval(300, 400, 10,10);
+        g.fillOval(0, 0, 10,10);
+        g.setColor(Color.BLUE);
+        g.fillOval(30, 40, 100,100);
 
+    }
+    
+    public void paintStick(Graphics g){
+    	//g.fillRect(x, y, width, height);
     }
 
     public void Paint(Graphics g){
+    	g.fillOval(300, 400, 10,10);
     	paintBall(g);
     }
 

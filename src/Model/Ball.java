@@ -5,11 +5,9 @@ import java.awt.Point;
 /**
  * Created by Linea on 18/12/2016.
  */
-public class Ball {
+public class Ball extends Moveable {
     //Felter
     private int diameterBall;
-    private int speedBall;
-    private Point pointBall;
     private String colorBall;
 
     //Constructor
