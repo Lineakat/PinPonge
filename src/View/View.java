@@ -13,6 +13,8 @@ public class View {
     private Start start;
     private GameOver gameOver;
     private GameBoard gameBoard;
+    private int frameHeight;
+    private int frameWidth;
 
     //Laver enums til hver af siderne
     public enum whichPage{
@@ -20,12 +22,17 @@ public class View {
     }
 
    //forhole
-    
+
+
+
     //Constructor
     public View(){
         start = new Start();
         gameOver = new GameOver();
         gameBoard = new GameBoard();
+
+        frameHeight = 900; //kan ændres
+        frameWidth = 1200; //kan ændres
 
         start();
 
@@ -36,7 +43,7 @@ public class View {
         goToPage(whichPage.START);
 
         frame.setVisible(true);
-        frame.setSize(1200,900);
+        frame.setSize(frameWidth,frameHeight);
     }
 
     private void start() {
@@ -47,6 +54,14 @@ public class View {
         frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 
+    }
+
+    public int getFrameHeight() {
+        return frameHeight;
+    }
+
+    public int getFrameWidth() {
+        return frameWidth;
     }
 
     public void goToPage(whichPage gotoPage) {

@@ -1,4 +1,5 @@
 import View.*;
+import Model.*;
 
 /**
  * Created by Linea og philip on 18/12/2016.
@@ -7,21 +8,28 @@ public class Controller {
     //private Model model;
     private static View view;
 	private static Controller control;
+	private static Model model;
 
     //Constructor
     public Controller() {
         view = new View();
-        createALButtonsStart();
-        createALButtonGameOver();
-        createALButtonToFront();
-        createALButtonRestartGame();
-        createALButtonGiveUp();
+        model = new Model();
+
+        createALButtons();
     }
 
     public static void main(String[] args){
         //System.out.println("HEJ PHILIP du er dejlig!");
         //System.out.println("HEJ PHILIP jeg elsker dig!");
         control = new Controller();
+    }
+
+    public void createALButtons(){
+        createALButtonsStart();
+        createALButtonGameOver();
+        createALButtonToFront();
+        createALButtonRestartGame();
+        createALButtonGiveUp();
     }
 
     //Start
@@ -71,6 +79,15 @@ public class Controller {
     //Gameboard
     public void buttonGiveUp(){
         buttonGameOver();
+    }
+
+
+    public int getFrameHeight() {
+        return view.getFrameHeight();
+    }
+
+    public int getFrameWidth() {
+        return view.getFrameWidth();
     }
 
 }

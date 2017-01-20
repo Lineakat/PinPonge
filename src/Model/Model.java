@@ -24,8 +24,28 @@ public class Model {
         //ball = new Ball(); //kan ikke lave endnu
         edgeBounce = new EdgeBounce();
         edgeDie = new EdgeDie();
+    }
 
+    public Stick getStick() {
+        return stick;
+    }
 
+    public Vector2D getStickPosition() {
+        return stickPosition;
+    }
+
+    /*
+    public Ball getBall() {
+        return ball;
+    }
+    */
+
+    public EdgeBounce getEdgeBounce() {
+        return edgeBounce;
+    }
+
+    public EdgeDie getEdgeDie() {
+        return edgeDie;
     }
 
 
