@@ -21,7 +21,6 @@ public class Start extends JPanel{
         panelCenter = new JPanel();
 
         setVisible(true);
-        setPreferredSize(new Dimension(1200, 900));
 
         startup();
     }

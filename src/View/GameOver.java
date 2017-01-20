@@ -10,6 +10,7 @@ import javax.swing.*;
  */
 public class GameOver extends JPanel {
 	private JPanel panelCenterGameOver;
+	private JLabel labelGameOver;
 	private JLabel labelLost;
 	private JButton restartButton;
 	private JButton toFrontButton;
@@ -17,7 +18,8 @@ public class GameOver extends JPanel {
     //Controller
     public GameOver() {
 		panelCenterGameOver = new JPanel();
-		labelLost = new JLabel("Game Over");
+		labelGameOver = new JLabel("Game Over");
+		labelLost = new JLabel("Good game, you win!"); //find ud af hvordan man laver somebody won
 		restartButton = new JButton("Restart Game");
 		toFrontButton = new JButton("To Front");
 
@@ -42,7 +44,7 @@ public class GameOver extends JPanel {
 
 		c.gridx = 1;
 		c.gridy = 1;
-		pane.add(labelLost, c);
+		pane.add(labelGameOver, c);
 		panelCenterGameOver.add(pane, BorderLayout.CENTER);
 
 		c.gridx = 1;
@@ -52,5 +54,9 @@ public class GameOver extends JPanel {
 		c.gridx = 2;
 		c.gridy = 2;
 		pane.add(toFrontButton, c);
+
+		c.gridx = 1;
+		c.gridy = 3;
+		pane.add(labelLost, c);
     }
 }
