@@ -60,7 +60,6 @@ public class GameBoard extends JPanel {
     public void paintBall(Graphics g){
         g.setColor(Color.BLUE);
         g.fillOval(30, 40, 100,100);
-
     }
 
     public void paintStick(Graphics g){
