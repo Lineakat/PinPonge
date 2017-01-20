@@ -17,5 +17,8 @@ public class Vector2D {
 		return this.y;
 	}
 	
+	public Vector2D add(Vector2D other) {
+		return new Vector2D(this.x + other.getX(), this.y + other.getY());
+	}
 	
 }

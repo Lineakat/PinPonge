@@ -11,7 +11,8 @@ public class Ball extends Moveable {
     private String colorBall;
 
     //Constructor
-    public Ball(int diameterBall, Point pointBall, String colorBall){
+    public Ball(int diameterBall, Vector2D pointBall, String colorBall){
+    	super(pointBall);
         this.diameterBall = diameterBall;
         this.colorBall = colorBall;
     }
