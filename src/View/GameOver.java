@@ -1,8 +1,6 @@
 package View;
 
-import java.awt.BorderLayout;
-import java.awt.GridBagConstraints;
-import java.awt.GridBagLayout;
+import java.awt.*;
 import java.awt.event.ActionListener;
 
 import javax.swing.*;
@@ -36,13 +34,11 @@ public class GameOver extends JPanel {
 
     public void startup(){
         add(panelCenterGameOver);
-        //panelCenterLost.add(labelLost);
-        //panelCenterLost.add(restartButton);
-		//panelCenterLost.add(toFrontButton);
-
 		JPanel pane = new JPanel(new GridBagLayout());
-		GridBagConstraints c = new GridBagConstraints();
 		panelCenterGameOver.setLayout(new BorderLayout());
+
+		GridBagConstraints c = new GridBagConstraints();
+		c.insets = new Insets(10, 10, 10, 10); //plads mellem knapperne og labels
 
 		c.gridx = 1;
 		c.gridy = 1;

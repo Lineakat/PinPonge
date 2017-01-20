@@ -34,11 +34,9 @@ public class View {
         createGameOver();
 
         goToPage(whichPage.START);
-        //goToPage(whichPage.GAMEOVER);
 
         frame.setVisible(true);
         frame.setSize(1200,900);
-
     }
 
     private void start() {
@@ -51,17 +49,10 @@ public class View {
 
     }
 
-/*
-    public static void main(String[] args){
-        View a = new View();
-    }
-*/
-
     public void goToPage(whichPage gotoPage) {
         CardLayout cardLayout = (CardLayout)panel.getLayout();
         cardLayout.show(panel, gotoPage.toString());
     }
-
 
     private void createStart(){
         start = new Start();

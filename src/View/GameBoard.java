@@ -11,13 +11,13 @@ import java.awt.image.BufferedImage;
 public class GameBoard extends JPanel {
 
     private JPanel panelCenter;
-    private JTextField text;
+    private JLabel text;
     private JButton giveUpButton;
 
 
     //Controller
     public GameBoard(){
-        text = new JTextField("New Game!");
+        text = new JLabel("New Game!");
         giveUpButton = new JButton("Give up!");
 
         panelCenter = new JPanel();

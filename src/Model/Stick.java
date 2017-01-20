@@ -8,12 +8,12 @@ import java.awt.Point;
 public class Stick {
 	private int lengthStick;
 	private int widthStick;
-	private Point pointStick;
+	private Vector2D stickPosition;
 
-	public Stick(int lengthStick, int widthStick, Point pointStick){
+	public Stick(int lengthStick, int widthStick, Vector2D stickPosition){
 		this.lengthStick = lengthStick;
 		this.widthStick = widthStick;
-		this.pointStick = pointStick;
+		this.stickPosition = stickPosition;
 	}
 	
 	public void setLengthStick(int lengthStick){
@@ -32,12 +32,12 @@ public class Stick {
 		return this.widthStick;
 	}
 	
-	public void setPointStick(Point pointStick){
-		this.pointStick = pointStick;
+	public void setStickPosition(Vector2D stickPosition){
+		this.stickPosition = stickPosition;
 	}
 	
-	public Point getPointStick(){
-		return this.pointStick;
+	public Vector2D getStickPosition(){
+		return this.stickPosition;
 	}
 	
 
