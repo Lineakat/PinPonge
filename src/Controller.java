@@ -13,15 +13,23 @@ public class Controller {
     //Constructor
     public Controller() {
         view = new View();
-        model = new Model();
-
+        model = new Model(view.getGameBoard().getBoardPane().getWidth(), view.getGameBoard().getBoardPane().getHeight());
+        model.getMoveable().setDirection(new Vector2D(2,0));
         createALButtons();
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws InterruptedException{
         //System.out.println("HEJ PHILIP du er dejlig!");
         //System.out.println("HEJ PHILIP jeg elsker dig!");
         control = new Controller();
+        
+        while(true){
+        	model.getMoveable().move();
+        	view.getGameBoard().getDrawBall().setPosition(model.getMoveable().getPosition().getX(), model.getMoveable().getPosition().getY());
+        	view.getGameBoard().updateBoard();
+        	Thread.sleep(10);
+        	
+        }
     }
 
     public void createALButtons(){

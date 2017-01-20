@@ -1,5 +1,6 @@
 package Model;
 
+import java.awt.Color;
 import java.awt.Point;
 
 /**
@@ -8,10 +9,10 @@ import java.awt.Point;
 public class Ball extends Moveable {
     //Felter
     private int diameterBall;
-    private String colorBall;
+    private Color colorBall;
 
     //Constructor
-    public Ball(int diameterBall, Vector2D pointBall, String colorBall){
+    public Ball(int diameterBall, Vector2D pointBall, Color colorBall){
     	super(pointBall);
         this.diameterBall = diameterBall;
         this.colorBall = colorBall;
@@ -28,11 +29,11 @@ public class Ball extends Moveable {
 
     
 
-    public String getColorBall() {
+    public Color getColorBall() {
         return colorBall;
     }
 
-    public void setColorBall(String colorBall) {
+    public void setColorBall(Color colorBall) {
         this.colorBall = colorBall;
     }
 

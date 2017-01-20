@@ -11,7 +11,7 @@ import java.awt.image.BufferedImage;
 public class GameBoard extends JPanel {
 
     private JPanel panelCenter;
-    
+    private DrawBall board;
     private JLabel text;
     private JButton giveUpButton;
 
@@ -32,7 +32,7 @@ public class GameBoard extends JPanel {
         panelCenter.setPreferredSize(dim);
         panelCenter.setBackground(Color.WHITE);
         
-        DrawBoard board = new DrawBoard();
+        board = new DrawBall();
         
         
         add(panelCenter);
@@ -47,8 +47,9 @@ public class GameBoard extends JPanel {
         //startBall();
     }
 
-    public void startup(){
-    	
+    public void updateBoard(){
+    	//board.setPosition(x, y);
+    	board.repaint();
     	
     }
 
@@ -68,6 +69,14 @@ public class GameBoard extends JPanel {
     public void Paint(Graphics g){
         g.fillOval(300, 400, 10,10);
         paintBall(g);
+    }
+    
+    public JPanel getBoardPane(){
+    	return this.panelCenter;
+    }
+    
+    public DrawBall getDrawBall(){
+    	return this.board;
     }
 
 }
