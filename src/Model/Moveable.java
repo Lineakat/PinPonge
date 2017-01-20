@@ -33,5 +33,11 @@ public class Moveable {
 	 public Vector2D getDirection(){
 		 return this.direction;
 	 }
+	 
+	 public void move() {
+		 	//change the direction at one point.
+			//setDirection(direction.add(acceleration));
+			setPosition(position.add(direction));
+		}
 
 }
