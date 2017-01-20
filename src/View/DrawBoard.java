@@ -12,7 +12,7 @@ public class DrawBoard extends JPanel{
 
 	
 	 public void paintComponent(Graphics g) {
-		 setSize(new Dimension(1200, 900));
+		 
 		 super.paintComponent(g);
 		 setBackground(Color.BLUE);
 		 
@@ -24,7 +24,7 @@ public class DrawBoard extends JPanel{
 		 g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 		 g2d.setPaint(Color.BLACK);
-		 System.out.println(getHeight());
+		
 		 g2d.drawLine(0, 0, 1200, 900);
 	 }
 }
