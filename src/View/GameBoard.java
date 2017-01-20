@@ -11,35 +11,34 @@ import java.awt.image.BufferedImage;
 public class GameBoard extends JPanel {
 
     private JPanel panelCenter;
-    private JPanel panelBoard;
+    
     private JLabel text;
     private JButton giveUpButton;
 
 
     //Controller
-    public GameBoard(){
+    public GameBoard(Dimension dim){
     	
     	text = new JLabel("New Game!");
         giveUpButton = new JButton("Give up!");
 
-        panelBoard = new JPanel();
+       
         panelCenter = new JPanel(new BorderLayout());
         setVisible(true);
-        setPreferredSize(new Dimension(1200, 900));
+        setPreferredSize(dim);
         setBackground(Color.WHITE); //Laver baggrunden hvid
         
         
-        panelCenter.setPreferredSize(new Dimension(1200, 900));
+        panelCenter.setPreferredSize(dim);
         panelCenter.setBackground(Color.WHITE);
         
         DrawBoard board = new DrawBoard();
         
         
-        panelBoard.add(board);
         add(panelCenter);
         panelCenter.add(text, BorderLayout.SOUTH);
         panelCenter.add(giveUpButton,BorderLayout.NORTH);
-        panelCenter.add(panelBoard, BorderLayout.CENTER);
+        panelCenter.add(board, BorderLayout.CENTER);
         
     	
 		

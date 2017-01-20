@@ -1,6 +1,7 @@
 package View;
 
 import java.awt.Color;
+import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -11,9 +12,11 @@ public class DrawBoard extends JPanel{
 
 	
 	 public void paintComponent(Graphics g) {
-
-	        super.paintComponent(g);
-	        doDrawing(g);
+		 setSize(new Dimension(1200, 900));
+		 super.paintComponent(g);
+		 setBackground(Color.BLUE);
+		 
+		 doDrawing(g);
 	    }
 	 
 	 public void doDrawing(Graphics g){
@@ -21,7 +24,7 @@ public class DrawBoard extends JPanel{
 		 g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
 		 g2d.setPaint(Color.BLACK);
-		 
-		 g2d.drawLine(0, 0, 1200, 400);
+		 System.out.println(getHeight());
+		 g2d.drawLine(0, 0, 1200, 900);
 	 }
 }

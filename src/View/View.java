@@ -27,14 +27,18 @@ public class View {
 
     //Constructor
     public View(){
+    	frameHeight = 900; //kan ændres
+        frameWidth = 1200; //kan ændres
+         
         start = new Start();
         gameOver = new GameOver();
-        gameBoard = new GameBoard();
+       // gameBoard = new GameBoard(new Dimension(frameHeight, frameWidth));
 
-        frameHeight = 900; //kan ændres
-        frameWidth = 1200; //kan ændres
+       
 
         start();
+        frame.setVisible(true);
+        frame.setSize(frameWidth,frameHeight);
 
         createStart();
         createGameBoard();
@@ -42,8 +46,7 @@ public class View {
 
         goToPage(whichPage.START);
 
-        frame.setVisible(true);
-        frame.setSize(frameWidth,frameHeight);
+
     }
 
     private void start() {
@@ -80,7 +83,8 @@ public class View {
     }
 
     private void createGameBoard(){
-        gameBoard = new GameBoard();
+        gameBoard = new GameBoard(new Dimension(frame.getContentPane().getWidth(), frame.getContentPane().getHeight()));
+        System.out.println(frame.getContentPane().getHeight());
         panel.add(gameBoard, whichPage.GAMEBOARD.toString());
     }
 
